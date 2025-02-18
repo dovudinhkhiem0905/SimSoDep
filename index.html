@@ -360,7 +360,45 @@
                 <div class="cart-total">
                     Tổng cộng: $<span id="cartTotal">0</span>
                 </div>
-                <button class="checkout-btn">Thanh Toán</button>
+                <button class="checkout-btn" onclick="showCheckoutInfo()">Thanh Toán</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add new checkout info overlay -->
+    <div class="checkout-overlay" id="checkoutOverlay">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3>Thông Tin Đặt Hàng</h3>
+                <button class="close-checkout"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="checkout-form">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="checkout-name">Họ và Tên</label>
+                        <input type="text" id="checkout-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-phone">Số Điện Thoại</label>
+                        <input type="tel" id="checkout-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-email">Email</label>
+                        <input type="email" id="checkout-email" required>
+                    </div>
+                    <div class="payment-info">
+                        <h4>Phương Thức Thanh Toán</h4>
+                        <p>Chúng tôi chấp nhận các hình thức thanh toán sau:</p>
+                        <ul>
+                            <li>Zelle</li>
+                            <li>Venmo</li>
+                            <li>Cash App</li>
+                            <li>Tiền mặt (gặp trực tiếp)</li>
+                        </ul>
+                        <p>Sau khi nhận được thông tin của bạn, chúng tôi sẽ liên hệ để xác nhận đơn hàng và cung cấp thông tin thanh toán.</p>
+                    </div>
+                    <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+                </form>
             </div>
         </div>
     </div>

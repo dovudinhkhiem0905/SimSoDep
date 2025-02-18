@@ -257,6 +257,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateCart();
             });
         });
+
+        const cartFooter = `
+            <div class="cart-total">
+                Tổng cộng: $<span id="cartTotal">${total}</span>
+            </div>
+            <button class="checkout-btn">Thanh Toán</button>
+        `;
+        
+        document.querySelector('.cart-footer').innerHTML = cartFooter;
+        
+        // Add event listener to the newly created button
+        document.querySelector('.checkout-btn').addEventListener('click', showCheckoutInfo);
     }
 
     // Add cart notification to body
@@ -436,4 +448,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add this at the start of your DOMContentLoaded event listener
     emailjs.init("SMqXcp68aZIs-7BoX"); // Replace with your actual public key
+
+    // Add these functions after your existing cart functionality
+    function showCheckoutInfo() {
+        const checkoutOverlay = document.getElementById('checkoutOverlay');
+        cartOverlay.classList.remove('active');
+        checkoutOverlay.classList.add('active');
+    }
+
+    // Add this to your DOMContentLoaded event listener
+    document.querySelector('.close-checkout').addEventListener('click', () => {
+        document.getElementById('checkoutOverlay').classList.remove('active');
+    });
+
+    document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('checkout-name').value,
+            phone: document.getElementById('checkout-phone').value,
+            email: document.getElementById('checkout-email').value,
+            cart: cart // This will include the cart items
+        };
+
+        // Send email using EmailJS
+        emailjs.send('service_47m7hgp', 'template_d3v4ric', {
+            from_name: formData.name,
+            phone_number: formData.phone,
+            email: formData.email,
+            message: `Order details:\n${cart.map(item => `${item.number}: $${item.price}`).join('\n')}`,
+        })
+        .then(() => {
+            alert('Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ sớm nhất có thể!');
+            cart = [];
+            updateCart();
+            document.getElementById('checkoutForm').reset();
+            document.getElementById('checkoutOverlay').classList.remove('active');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Có lỗi xảy ra. Vui lòng thử lại sau!');
+        });
+    });
 }); 
