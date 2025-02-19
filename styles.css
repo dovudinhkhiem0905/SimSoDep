@@ -847,6 +847,45 @@ body {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-info {
+        display: none; /* Hide contact info on mobile */
+    }
+
+    .right-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .language-switcher {
+        margin-right: 0;
+    }
+
+    .lang-btn {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .lang-btn .current-lang {
+        display: inline-block; /* Show language text on mobile */
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+    }
+
     /* Header adjustments */
     .top-bar {
         padding: 5px 0;
