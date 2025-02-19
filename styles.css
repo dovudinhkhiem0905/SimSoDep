@@ -1106,46 +1106,171 @@ body {
     font-size: 1.8rem;
 }
 
+/* Timeline Styles */
 .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Vertical line */
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: var(--secondary-color);
+    border-radius: 2px;
 }
 
 .step-card {
-    background: white;
+    width: calc(50% - 30px);
+    margin: 30px 0;
+    position: relative;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.step-card:hover {
-    transform: translateY(-5px);
+/* Alternate left and right */
+.step-card:nth-child(odd) {
+    margin-right: auto;
 }
 
+.step-card:nth-child(even) {
+    margin-left: auto;
+}
+
+/* Connecting lines to timeline */
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 4px;
+    background: var(--secondary-color);
+}
+
+.step-card:nth-child(odd)::before {
+    right: -30px;
+}
+
+.step-card:nth-child(even)::before {
+    left: -30px;
+}
+
+/* Step numbers */
 .step-number {
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
     background: var(--secondary-color);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin: 0 auto 20px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.step-card:nth-child(odd) .step-number {
+    right: -55px;
+}
+
+.step-card:nth-child(even) .step-number {
+    left: -55px;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .step-card h4 {
     color: var(--primary-color);
     margin-bottom: 15px;
+    font-size: 1.3rem;
 }
 
+.step-card p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.step-details-trigger {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.step-details-trigger:hover {
+    color: var(--primary-color);
+}
+
+.step-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: left;
+    padding: 0;
+    margin-top: 15px;
+    white-space: pre-line;
+    color: var(--text-color);
+}
+
+.step-card.active .step-details {
+    max-height: 200px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.step-card.active {
+    background: var(--light-bg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .steps-grid::before {
+        left: 30px;
+    }
+    
+    .step-card {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+    
+    .step-card::before {
+        left: -30px !important;
+    }
+    
+    .step-number {
+        left: -45px !important;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .porting-note {
+        margin-left: 60px;
+    }
+}
+
+/* Update porting note styles */
 .porting-note {
     background: var(--light-bg);
     padding: 20px;
@@ -1153,11 +1278,14 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .porting-note i {
     font-size: 1.5rem;
     color: var(--secondary-color);
+    flex-shrink: 0;
 }
 
 .porting-note p {

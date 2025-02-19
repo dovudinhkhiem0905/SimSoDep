@@ -62,6 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.lang-dropdown a').forEach(link => {
             link.classList.toggle('active', link.dataset.lang === lang);
         });
+
+        // Update step details
+        document.querySelectorAll('.step-card').forEach(card => {
+            const detailsKey = card.dataset.details;
+            const detailsElement = card.querySelector('.step-details');
+            if (detailsElement && translations[lang][detailsKey]) {
+                detailsElement.textContent = translations[lang][detailsKey];
+            }
+        });
     }
     
     // Language switcher button click handler
@@ -580,6 +589,21 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => {
             console.error('Error:', error);
             alert('Có lỗi xảy ra. Vui lòng thử lại sau!');
+        });
+    });
+
+    // Add this to your existing DOMContentLoaded event listener
+    document.querySelectorAll('.step-card').forEach(card => {
+        card.addEventListener('click', () => {
+            // Toggle active state
+            card.classList.toggle('active');
+            
+            // Update details content if not already set
+            const detailsKey = card.dataset.details;
+            const detailsElement = card.querySelector('.step-details');
+            if (detailsElement && !detailsElement.textContent && translations[currentLanguage][detailsKey]) {
+                detailsElement.textContent = translations[currentLanguage][detailsKey];
+            }
         });
     });
 }); 

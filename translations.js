@@ -135,11 +135,16 @@ const translations = {
         step1Desc: "Chọn số điện thoại và tiến hành đặt hàng qua website",
         step2Title: "Bước 2: Xác Nhận",
         step2Desc: "Chúng tôi sẽ liên hệ để xác nhận đơn hàng và hướng dẫn thanh toán",
-        step3Title: "Bước 3: Chuyển Số",
-        step3Desc: "Cung cấp thông tin số điện thoại cần chuyển và nhà mạng hiện tại",
+        step3Title: "Bước 3: Kích Hoạt",
+        step3Desc: "Chúng tôi sẽ cung cấp thông tin tài khoản port-in và mã PIN để kích hoạt số mới",
         step4Title: "Bước 4: Hoàn Tất",
-        step4Desc: "Quá trình chuyển số hoàn tất trong vòng 24-48 giờ",
-        portingNote: "Lưu ý: Quý khách cần giữ số điện thoại hiện tại hoạt động cho đến khi quá trình chuyển số hoàn tất"
+        step4Desc: "Quá trình chuyển số hoàn tất trong vòng 2-24 giờ (tối đa 3-5 ngày trong một số trường hợp)",
+        portingNote: "Lưu ý: Quý khách cần giữ số điện thoại hiện tại hoạt động cho đến khi quá trình chuyển số hoàn tất",
+        clickForMore: "Nhấp để xem chi tiết",
+        step1Details: "• Chọn số điện thoại ưng ý\n• Thêm vào giỏ hàng\n• Điền thông tin liên hệ",
+        step2Details: "• Nhận cuộc gọi xác nhận từ nhân viên\n• Được hướng dẫn các phương thức thanh toán\n• Thanh toán an toàn và bảo mật",
+        step3Details: "• Nhận thông tin tài khoản port-in\n• Nhận mã PIN kích hoạt\n• Được hướng dẫn chi tiết quy trình",
+        step4Details: "• Theo dõi tiến trình chuyển số\n• Nhận thông báo khi hoàn tất\n• Bắt đầu sử dụng số mới"
     },
     
     en: {
@@ -278,11 +283,16 @@ const translations = {
         step1Desc: "Select your phone number and place an order through the website",
         step2Title: "Step 2: Confirmation",
         step2Desc: "We will contact you to confirm the order and provide payment instructions",
-        step3Title: "Step 3: Porting",
-        step3Desc: "Provide your current phone number and carrier information",
+        step3Title: "Step 3: Activation",
+        step3Desc: "We will provide port-in account information and PIN code to activate your new number",
         step4Title: "Step 4: Completion",
-        step4Desc: "Porting process completes within 24-48 hours",
-        portingNote: "Note: Please keep your current phone number active until the porting process is complete"
+        step4Desc: "Porting process completes within 2-24 hours (maximum 3-5 days in some cases)",
+        portingNote: "Note: Please keep your current phone number active until the porting process is complete",
+        clickForMore: "Click for details",
+        step1Details: "• Select your desired phone number\n• Add to cart\n• Fill in contact information",
+        step2Details: "• Receive confirmation call from our staff\n• Get guided through payment methods\n• Secure payment process",
+        step3Details: "• Receive port-in account information\n• Get activation PIN code\n• Detailed process guidance",
+        step4Details: "• Track porting progress\n• Receive completion notification\n• Start using new number"
     },
     
     zh: {
@@ -421,11 +431,16 @@ const translations = {
         step1Desc: "在网站上选择电话号码并下单",
         step2Title: "第2步：确认",
         step2Desc: "我们将联系您确认订单并提供付款说明",
-        step3Title: "第3步：转携",
-        step3Desc: "提供您当前的电话号码和运营商信息",
+        step3Title: "第3步：激活",
+        step3Desc: "我们将提供转入账户信息和PIN码以激活新号码",
         step4Title: "第4步：完成",
-        step4Desc: "转携过程在24-48小时内完成",
-        portingNote: "注意：在转携过程完成之前，请保持当前电话号码处于活动状态"
+        step4Desc: "转携过程在2-24小时内完成（某些情况下最多3-5天）",
+        portingNote: "注意：在转携过程完成之前，请保持当前电话号码处于活动状态",
+        clickForMore: "点击查看详情",
+        step1Details: "• 选择心仪的电话号码\n• 添加到购物车\n• 填写联系信息",
+        step2Details: "• 接收工作人员的确认电话\n• 获取支付方式指导\n• 安全支付流程",
+        step3Details: "• 接收转入账户信息\n• 获取激活PIN码\n• 详细流程指导",
+        step4Details: "• 跟踪转携进度\n• 接收完成通知\n• 开始使用新号码"
     }
 };
 
