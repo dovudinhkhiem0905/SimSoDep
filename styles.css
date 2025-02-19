@@ -1001,4 +1001,77 @@ body {
 
 .number-card:hover {
     transform: translateY(-2px);
+}
+
+/* Language switcher styles */
+.language-switcher {
+    position: relative;
+    z-index: 1001;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+    opacity: 0.8;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    min-width: 120px;
+}
+
+.lang-dropdown.active {
+    display: block;
+}
+
+.lang-dropdown a {
+    color: var(--text-color);
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.lang-dropdown a:hover {
+    background: var(--light-bg);
+}
+
+.lang-dropdown a.active {
+    background: var(--light-bg);
+    color: var(--primary-color);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .lang-btn .current-lang {
+        display: none;
+    }
+    
+    .lang-dropdown {
+        right: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lang-dropdown {
+        right: 50%;
+        transform: translateX(50%);
+    }
 } 

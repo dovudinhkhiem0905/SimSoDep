@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KVD Vip Numbers - Sim Số Đẹp Mỹ | Số VIP | Sim Giá Rẻ</title>
+    <title>KVD USA Numbers - Sim Số Đẹp Mỹ | Số VIP | Sim Giá Rẻ</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -15,12 +16,26 @@
             <div class="container">
                 <div class="contact-info">
                     <a href="tel:+18479997890"><i class="fas fa-phone"></i> 1-847-999-7890</a>
-                    <a href="mailto:info@simusa.com"><i class="fas fa-envelope"></i> contact@kvdusanumbers.com</a>
+                    <a href="mailto:contact@kvdusanumbers.com"><i class="fas fa-envelope"></i> contact@kvdusanumbers.com</a>
                 </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-zalo"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="right-section">
+                    <div class="language-switcher">
+                        <button class="lang-btn">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-lang">Tiếng Việt</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown">
+                            <a href="#" data-lang="vi" class="active">Tiếng Việt</a>
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-zalo"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,14 +49,14 @@
                     <a href="/">KVD USA Numbers</a>
                 </div>
                 <div class="nav-links">
-                    <a href="#home">Trang Chủ</a>
-                    <a href="#sim-so-dep">Sim Số Đẹp</a>
-                    <a href="#sim-vip">Sim VIP</a>
-                    <a href="#sim-gia-re">Sim Giá Rẻ</a>
+                    <a href="#home" data-translate="home">Trang Chủ</a>
+                    <a href="#sim-so-dep" data-translate="niceNumbers">Sim Số Đẹp</a>
+                    <a href="#sim-vip" data-translate="vipNumbers">Sim VIP</a>
+                    <a href="#sim-gia-re" data-translate="cheapNumbers">Sim Giá Rẻ</a>
                 </div>
                 <div class="search-cart">
                     <div class="search-box">
-                        <input type="text" placeholder="Tìm số điện thoại...">
+                        <input type="text" data-translate-placeholder="search">
                         <button><i class="fas fa-search"></i></button>
                     </div>
                     <a href="#" class="cart">
@@ -53,10 +68,10 @@
         </nav>
     </header>
 
-    <!-- Add the banner here, right after header -->
+    <!-- Promo Banner -->
     <div class="promo-banner">
-        <span>🎉 KHUYẾN MÃI KHAI TRƯƠNG ĐẶC BIỆT 🎉<br>
-        <strong><i class="fas fa-gift fa-lg"></i>GIẢM GIÁ 20% TẤT CẢ CÁC SỐ <i class="fas fa-gift fa-lg"></i></strong></span>
+        <span>🎉 <span data-translate="promoTitle"></span> 🎉</span><br>
+        <strong><i class="fas fa-gift fa-lg"></i><span data-translate="promoDiscount"></span> <i class="fas fa-gift fa-lg"></i></strong>
     </div>
 
     <main>
@@ -367,7 +382,7 @@
     <div class="cart-overlay" id="cartOverlay">
         <div class="cart-content">
             <div class="cart-header">
-                <h3>Giỏ Hàng</h3>
+                <h3 data-translate="cart">Giỏ Hàng</h3>
                 <button class="close-cart"><i class="fas fa-times"></i></button>
             </div>
             <div class="cart-items">
@@ -375,9 +390,9 @@
             </div>
             <div class="cart-footer">
                 <div class="cart-total">
-                    Tổng cộng: $<span id="cartTotal">0</span>
+                    <span data-translate="total">Tổng cộng</span>: $<span id="cartTotal">0</span>
                 </div>
-                <button class="checkout-btn" onclick="showCheckoutInfo()">Thanh Toán</button>
+                <button class="checkout-btn" data-translate="checkout">Thanh Toán</button>
             </div>
         </div>
     </div>
@@ -386,7 +401,7 @@
     <div class="checkout-overlay" id="checkoutOverlay">
         <div class="checkout-content">
             <div class="checkout-header">
-                <h3>Thông Tin Đặt Hàng</h3>
+                <h3 data-translate="orderInfo">Thông Tin Đặt Hàng</h3>
                 <button class="close-checkout"><i class="fas fa-times"></i></button>
             </div>
             <div class="checkout-form">
@@ -419,7 +434,5 @@
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html> 

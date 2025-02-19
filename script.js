@@ -1,4 +1,82 @@
+// Import translations
+import translations from './translations.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize language
+    let currentLanguage = localStorage.getItem('language') || 'vi';
+    
+    // Language switching function
+    function switchLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('language', lang);
+        
+        // Update all translatable elements
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.dataset.translate;
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+        
+        // Update placeholders
+        document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+            const key = element.dataset.translatePlaceholder;
+            if (translations[lang][key]) {
+                element.placeholder = translations[lang][key];
+            }
+        });
+
+        // Update button values
+        document.querySelectorAll('[data-translate-value]').forEach(element => {
+            const key = element.dataset.translateValue;
+            if (translations[lang][key]) {
+                element.value = translations[lang][key];
+            }
+        });
+        
+        // Update current language display
+        const langDisplay = {
+            'vi': 'Tiếng Việt',
+            'en': 'English',
+            'zh': '中文'
+        };
+        document.querySelector('.current-lang').textContent = langDisplay[lang];
+        
+        // Update active state in dropdown
+        document.querySelectorAll('.lang-dropdown a').forEach(link => {
+            link.classList.toggle('active', link.dataset.lang === lang);
+        });
+    }
+    
+    // Language switcher button click handler
+    const langBtn = document.querySelector('.lang-btn');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    
+    langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+    });
+    
+    // Language selection handler
+    document.querySelectorAll('.lang-dropdown a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = e.target.dataset.lang;
+            switchLanguage(lang);
+            langDropdown.classList.remove('active');
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.language-switcher')) {
+            langDropdown.classList.remove('active');
+        }
+    });
+
+    // Initialize with saved language
+    switchLanguage(currentLanguage);
+
     // Initialize cart
     let cart = [];
     const cartItems = document.querySelector('.cart-items');
