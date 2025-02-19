@@ -120,7 +120,7 @@
         <!-- Category sections -->
         <section id="sim-so-dep" class="page-section" style="display: none;">
             <div class="container">
-                <h2 data-translate="niceNumbers">Sim Số Đẹp</h2>
+                <h2 data-translate="niceSectionTitle">Sim Số Đẹp</h2>
                 <div class="filter-container">
                     <select class="state-filter">
                         <option value="" data-translate="allStates">Tất Cả Tiểu Bang</option>
@@ -184,7 +184,7 @@
 
         <section id="sim-vip" class="page-section" style="display: none;">
             <div class="container">
-                <h2 data-translate="vipNumbers">Sim VIP</h2>
+                <h2 data-translate="vipSectionTitle">Sim VIP</h2>
                 <div class="filter-container">
                     <select class="state-filter">
                         <option value="" data-translate="allStates">Tất Cả Tiểu Bang</option>
@@ -253,7 +253,7 @@
 
         <section id="sim-gia-re" class="page-section" style="display: none;">
             <div class="container">
-                <h2 data-translate="cheapNumbers">Sim Giá Rẻ</h2>
+                <h2 data-translate="cheapSectionTitle">Sim Giá Rẻ</h2>
                 <div class="filter-container">
                     <select class="state-filter">
                         <option value="" data-translate="allStates">Tất Cả Tiểu Bang</option>
@@ -323,7 +323,7 @@
         <!-- Contact Form Section -->
         <section id="contact" class="page-section contact-section" style="display: none;">
             <div class="container">
-                <h2>Liên Hệ Tư Vấn</h2>
+                <h2 data-translate="contactFormTitle">Liên Hệ Tư Vấn</h2>
                 <div class="contact-form-container">
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
@@ -331,18 +331,18 @@
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Số Điện Thoại</label>
+                            <label for="phone" data-translate="phone">Số Điện Thoại</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-translate="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Nội Dung</label>
+                            <label for="message" data-translate="message">Nội Dung</label>
                             <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+                        <button type="submit" class="submit-btn" data-translate="sendInfo">Gửi Thông Tin</button>
                     </form>
                 </div>
             </div>
@@ -353,11 +353,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>Về SimUSA</h4>
-                    <p>Chuyên cung cấp sim số đẹp Mỹ cho cộng đồng người Việt.</p>
+                    <h4 data-translate="footerAbout">Về SimUSA</h4>
+                    <p data-translate="footerAboutDesc">Chuyên cung cấp sim số đẹp Mỹ cho cộng đồng người Việt.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Liên Hệ</h4>
+                    <h4 data-translate="footerContact">Liên Hệ</h4>
                     <p>
                         <i class="fas fa-phone"></i> 1-847-999-7890
                         <br>
@@ -365,7 +365,7 @@
                     </p>
                 </div>
                 <div class="footer-section">
-                    <h4>Theo Dõi</h4>
+                    <h4 data-translate="footerFollow">Theo Dõi</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-zalo"></i></a>
@@ -374,7 +374,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 KVD USA Numbers. All rights reserved.</p>
+                <p>&copy; 2025 <span data-translate="footerCopyright">KVD USA Numbers. Đã đăng ký bản quyền.</span></p>
             </div>
         </div>
     </footer>
@@ -382,7 +382,7 @@
     <div class="cart-overlay" id="cartOverlay">
         <div class="cart-content">
             <div class="cart-header">
-                <h3 data-translate="cart">Giỏ Hàng</h3>
+                <h3 data-translate="cartTitle">Giỏ Hàng</h3>
                 <button class="close-cart"><i class="fas fa-times"></i></button>
             </div>
             <div class="cart-items">
@@ -407,29 +407,29 @@
             <div class="checkout-form">
                 <form id="checkoutForm">
                     <div class="form-group">
-                        <label for="checkout-name">Họ và Tên</label>
+                        <label for="checkout-name" data-translate="fullName">Họ và Tên</label>
                         <input type="text" id="checkout-name" required>
                     </div>
                     <div class="form-group">
-                        <label for="checkout-phone">Số Điện Thoại</label>
+                        <label for="checkout-phone" data-translate="phone">Số Điện Thoại</label>
                         <input type="tel" id="checkout-phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="checkout-email">Email</label>
+                        <label for="checkout-email" data-translate="email">Email</label>
                         <input type="email" id="checkout-email" required>
                     </div>
                     <div class="payment-info">
-                        <h4>Phương Thức Thanh Toán</h4>
-                        <p>Chúng tôi chấp nhận các hình thức thanh toán sau:</p>
+                        <h4 data-translate="paymentMethodsTitle">Phương Thức Thanh Toán</h4>
+                        <p data-translate="acceptedPayments">Chúng tôi chấp nhận các hình thức thanh toán sau:</p>
                         <ul>
-                            <li>Zelle</li>
-                            <li>Venmo</li>
-                            <li>Cash App</li>
-                            <li>Tiền mặt (gặp trực tiếp)</li>
+                            <li data-translate="zelle">Zelle</li>
+                            <li data-translate="venmo">Venmo</li>
+                            <li data-translate="cashApp">Cash App</li>
+                            <li data-translate="cashInPerson">Tiền mặt (gặp trực tiếp)</li>
                         </ul>
-                        <p>Sau khi nhận được thông tin của bạn, chúng tôi sẽ liên hệ để xác nhận đơn hàng và cung cấp thông tin thanh toán.</p>
+                        <p data-translate="paymentNote">Sau khi nhận được thông tin của bạn, chúng tôi sẽ liên hệ để xác nhận đơn hàng và cung cấp thông tin thanh toán.</p>
                     </div>
-                    <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+                    <button type="submit" class="submit-btn" data-translate="sendInfo">Gửi Thông Tin</button>
                 </form>
             </div>
         </div>

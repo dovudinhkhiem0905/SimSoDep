@@ -82,9 +82,11 @@ const translations = {
         sendInfo: "Gửi Thông Tin",
         
         // Footer
-        aboutUs: "Về SimUSA",
-        aboutDesc: "Chuyên cung cấp sim số đẹp Mỹ cho cộng đồng người Việt.",
-        followUs: "Theo Dõi",
+        footerAbout: "Về SimUSA",
+        footerAboutDesc: "Chuyên cung cấp sim số đẹp Mỹ cho cộng đồng người Việt.",
+        footerContact: "Liên Hệ",
+        footerFollow: "Theo Dõi",
+        footerCopyright: "KVD USA Numbers. Đã đăng ký bản quyền.",
         
         // Cart
         added: "Đã thêm",
@@ -95,7 +97,36 @@ const translations = {
         
         // Success Messages
         orderSuccess: "Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ sớm nhất có thể!",
-        orderError: "Có lỗi xảy ra. Vui lòng thử lại sau!"
+        orderError: "Có lỗi xảy ra. Vui lòng thử lại sau!",
+        
+        // Contact Form
+        contactFormTitle: "Liên Hệ Tư Vấn",
+        
+        // Payment Methods
+        paymentMethodsTitle: "Phương Thức Thanh Toán",
+        acceptedPayments: "Chúng tôi chấp nhận các hình thức thanh toán sau:",
+        zelle: "Zelle",
+        venmo: "Venmo",
+        cashApp: "Cash App",
+        
+        // Cart and Checkout
+        cartTitle: "Giỏ Hàng",
+        total: "Tổng cộng",
+        checkout: "Thanh Toán",
+        orderInfo: "Thông Tin Đặt Hàng",
+        fullName: "Họ và Tên",
+        phone: "Số Điện Thoại",
+        email: "Email",
+        message: "Nội Dung",
+        paymentNote: "Sau khi nhận được thông tin của bạn, chúng tôi sẽ liên hệ để xác nhận đơn hàng và cung cấp thông tin thanh toán.",
+        
+        // Section Titles
+        vipSectionTitle: "Sim VIP",
+        niceSectionTitle: "Sim Số Đẹp",
+        cheapSectionTitle: "Sim Giá Rẻ",
+        
+        // States
+        allStates: "Tất Cả Tiểu Bang"
     },
     
     en: {
@@ -181,9 +212,11 @@ const translations = {
         sendInfo: "Send Information",
         
         // Footer
-        aboutUs: "About SimUSA",
-        aboutDesc: "Providing premium US phone numbers for the Vietnamese community.",
-        followUs: "Follow Us",
+        footerAbout: "About SimUSA",
+        footerAboutDesc: "Providing premium US phone numbers for the Vietnamese community.",
+        footerContact: "Contact",
+        footerFollow: "Follow Us",
+        footerCopyright: "KVD USA Numbers. All rights reserved.",
         
         // Cart
         added: "Added",
@@ -194,7 +227,36 @@ const translations = {
         
         // Success Messages
         orderSuccess: "Thank you for your order. We will contact you as soon as possible!",
-        orderError: "An error occurred. Please try again later!"
+        orderError: "An error occurred. Please try again later!",
+        
+        // Contact Form
+        contactFormTitle: "Contact Us",
+        
+        // Payment Methods
+        paymentMethodsTitle: "Payment Methods",
+        acceptedPayments: "We accept the following payment methods:",
+        zelle: "Zelle",
+        venmo: "Venmo",
+        cashApp: "Cash App",
+        
+        // Cart and Checkout
+        cartTitle: "Shopping Cart",
+        total: "Total",
+        checkout: "Checkout",
+        orderInfo: "Order Information",
+        fullName: "Full Name",
+        phone: "Phone Number",
+        email: "Email",
+        message: "Message",
+        paymentNote: "After receiving your information, we will contact you to confirm the order and provide payment details.",
+        
+        // Section Titles
+        vipSectionTitle: "VIP Numbers",
+        niceSectionTitle: "Premium Numbers",
+        cheapSectionTitle: "Budget Numbers",
+        
+        // States
+        allStates: "All States"
     },
     
     zh: {
@@ -280,9 +342,11 @@ const translations = {
         sendInfo: "发送信息",
         
         // Footer
-        aboutUs: "关于SimUSA",
-        aboutDesc: "为越南社区提供优质美国电话号码。",
-        followUs: "关注我们",
+        footerAbout: "关于SimUSA",
+        footerAboutDesc: "为越南社区提供优质美国电话号码。",
+        footerContact: "联系我们",
+        footerFollow: "关注我们",
+        footerCopyright: "KVD USA Numbers. 版权所有。",
         
         // Cart
         added: "已添加",
@@ -293,7 +357,36 @@ const translations = {
         
         // Success Messages
         orderSuccess: "感谢您的订购。我们会尽快与您联系！",
-        orderError: "发生错误。请稍后重试！"
+        orderError: "发生错误。请稍后重试！",
+        
+        // Contact Form
+        contactFormTitle: "联系我们",
+        
+        // Payment Methods
+        paymentMethodsTitle: "支付方式",
+        acceptedPayments: "我们接受以下支付方式：",
+        zelle: "Zelle",
+        venmo: "Venmo",
+        cashApp: "Cash App",
+        
+        // Cart and Checkout
+        cartTitle: "购物车",
+        total: "总计",
+        checkout: "结账",
+        orderInfo: "订单信息",
+        fullName: "姓名",
+        phone: "电话号码",
+        email: "电子邮件",
+        message: "留言",
+        paymentNote: "收到您的信息后，我们会联系您确认订单并提供支付详情。",
+        
+        // Section Titles
+        vipSectionTitle: "VIP号码",
+        niceSectionTitle: "精选号码",
+        cheapSectionTitle: "优惠号码",
+        
+        // States
+        allStates: "所有州"
     }
 };
 
