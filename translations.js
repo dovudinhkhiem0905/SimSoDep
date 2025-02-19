@@ -199,7 +199,7 @@ const translations = {
         
         // Footer
         about: "About KVD USA Numbers",
-        aboutDesc: "Providing premium US phone numbers to the Vietnamese community.",
+        aboutDesc: "Providing premium US phone numbers.",
         contact: "Contact",
         followUs: "Follow Us",
         contactUs: "Contact Us",
@@ -224,7 +224,7 @@ const translations = {
         
         // Hero Section
         heroTitle: "Premium US Phone Numbers",
-        heroDesc: "The most unique and beautiful US phone numbers for the Vietnamese community",
+        heroDesc: "The most unique and beautiful US phone numbers",
         contactUs: "Contact Us",
         
         // Features
@@ -247,7 +247,7 @@ const translations = {
         
         // Footer
         footerAbout: "About SimUSA",
-        footerAboutDesc: "Providing premium US phone numbers for the Vietnamese community.",
+        footerAboutDesc: "Premium US phone numbers.",
         footerContact: "Contact",
         footerFollow: "Follow Us",
         footerCopyright: "KVD USA Numbers. All rights reserved.",
@@ -363,7 +363,7 @@ const translations = {
         
         // Footer
         about: "关于KVD USA Numbers",
-        aboutDesc: "为越南社区提供优质美国电话号码。",
+        aboutDesc: "为华人社区提供优质美国电话号码。",
         contact: "联系我们",
         followUs: "关注我们",
         contactUs: "联系方式",
@@ -388,7 +388,7 @@ const translations = {
         
         // Hero Section
         heroTitle: "美国精品电话号码",
-        heroDesc: "为越南社区提供最独特和精美的美国电话号码",
+        heroDesc: "为华人社区提供最独特和精美的美国电话号码",
         contactUs: "联系我们",
         
         // Features
@@ -410,8 +410,8 @@ const translations = {
         sendInfo: "发送信息",
         
         // Footer
-        footerAbout: "关于SimUSA",
-        footerAboutDesc: "为越南社区提供优质美国电话号码。",
+        footerAbout: "关于 SimUSA",
+        footerAboutDesc: "为华人社区提供优质美国电话号码。",
         footerContact: "联系我们",
         footerFollow: "关注我们",
         footerCopyright: "KVD USA Numbers. 版权所有。",
