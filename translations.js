@@ -126,7 +126,20 @@ const translations = {
         cheapSectionTitle: "Sim Giá Rẻ",
         
         // States
-        allStates: "Tất Cả Tiểu Bang"
+        allStates: "Tất Cả Tiểu Bang",
+        
+        // Instructions Section
+        instructionsTitle: "Hướng Dẫn",
+        portingTitle: "Quy Trình Chuyển Số",
+        step1Title: "Bước 1: Đặt Mua",
+        step1Desc: "Chọn số điện thoại và tiến hành đặt hàng qua website",
+        step2Title: "Bước 2: Xác Nhận",
+        step2Desc: "Chúng tôi sẽ liên hệ để xác nhận đơn hàng và hướng dẫn thanh toán",
+        step3Title: "Bước 3: Chuyển Số",
+        step3Desc: "Cung cấp thông tin số điện thoại cần chuyển và nhà mạng hiện tại",
+        step4Title: "Bước 4: Hoàn Tất",
+        step4Desc: "Quá trình chuyển số hoàn tất trong vòng 24-48 giờ",
+        portingNote: "Lưu ý: Quý khách cần giữ số điện thoại hiện tại hoạt động cho đến khi quá trình chuyển số hoàn tất"
     },
     
     en: {
@@ -256,7 +269,20 @@ const translations = {
         cheapSectionTitle: "Budget Numbers",
         
         // States
-        allStates: "All States"
+        allStates: "All States",
+        
+        // Instructions Section
+        instructionsTitle: "Instructions",
+        portingTitle: "Number Porting Process",
+        step1Title: "Step 1: Purchase",
+        step1Desc: "Select your phone number and place an order through the website",
+        step2Title: "Step 2: Confirmation",
+        step2Desc: "We will contact you to confirm the order and provide payment instructions",
+        step3Title: "Step 3: Porting",
+        step3Desc: "Provide your current phone number and carrier information",
+        step4Title: "Step 4: Completion",
+        step4Desc: "Porting process completes within 24-48 hours",
+        portingNote: "Note: Please keep your current phone number active until the porting process is complete"
     },
     
     zh: {
@@ -386,7 +412,20 @@ const translations = {
         cheapSectionTitle: "优惠号码",
         
         // States
-        allStates: "所有州"
+        allStates: "所有州",
+        
+        // Instructions Section
+        instructionsTitle: "使用说明",
+        portingTitle: "号码转携流程",
+        step1Title: "第1步：购买",
+        step1Desc: "在网站上选择电话号码并下单",
+        step2Title: "第2步：确认",
+        step2Desc: "我们将联系您确认订单并提供付款说明",
+        step3Title: "第3步：转携",
+        step3Desc: "提供您当前的电话号码和运营商信息",
+        step4Title: "第4步：完成",
+        step4Desc: "转携过程在24-48小时内完成",
+        portingNote: "注意：在转携过程完成之前，请保持当前电话号码处于活动状态"
     }
 };
 

@@ -1074,4 +1074,118 @@ body {
         right: 50%;
         transform: translateX(50%);
     }
+}
+
+/* Page Title Styles */
+.page-title {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.page-title h2 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Instructions Section Styles */
+.instructions-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.porting-process h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.step-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.step-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.porting-note {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.porting-note i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.porting-note p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Update existing section titles */
+#sim-so-dep h2,
+#sim-vip h2,
+#sim-gia-re h2,
+#contact h2 {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .porting-note {
+        flex-direction: column;
+        text-align: center;
+    }
 } 
