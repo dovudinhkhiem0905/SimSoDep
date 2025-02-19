@@ -144,7 +144,23 @@ const translations = {
         step1Details: "• Chọn số điện thoại ưng ý\n• Thêm vào giỏ hàng\n• Điền thông tin liên hệ",
         step2Details: "• Nhận cuộc gọi xác nhận từ nhân viên\n• Được hướng dẫn các phương thức thanh toán\n• Thanh toán an toàn và bảo mật",
         step3Details: "• Nhận thông tin tài khoản port-in\n• Nhận mã PIN kích hoạt\n• Được hướng dẫn chi tiết quy trình",
-        step4Details: "• Theo dõi tiến trình chuyển số\n• Nhận thông báo khi hoàn tất\n• Bắt đầu sử dụng số mới"
+        step4Details: "• Theo dõi tiến trình chuyển số\n• Nhận thông báo khi hoàn tất\n• Bắt đầu sử dụng số mới",
+        
+        // Filter and Display
+        filterNumbers: "Lọc Số",
+        searchPlaceholder: "Nhập số cần tìm...",
+        displayCount: "Hiển thị",
+        itemsPerPage: "số mỗi trang",
+        priceRange: "Khoảng Giá",
+        minPrice: "Giá thấp nhất",
+        maxPrice: "Giá cao nhất",
+        applyFilter: "Áp Dụng",
+        resetFilter: "Đặt Lại",
+        
+        // Sort Options
+        sortBy: "Sắp xếp theo",
+        priceLowHigh: "Giá: Thấp đến Cao",
+        priceHighLow: "Giá: Cao đến Thấp",
     },
     
     en: {
@@ -292,7 +308,23 @@ const translations = {
         step1Details: "• Select your desired phone number\n• Add to cart\n• Fill in contact information",
         step2Details: "• Receive confirmation call from our staff\n• Get guided through payment methods\n• Secure payment process",
         step3Details: "• Receive port-in account information\n• Get activation PIN code\n• Detailed process guidance",
-        step4Details: "• Track porting progress\n• Receive completion notification\n• Start using new number"
+        step4Details: "• Track porting progress\n• Receive completion notification\n• Start using new number",
+        
+        // Filter and Display
+        filterNumbers: "Filter Numbers",
+        searchPlaceholder: "Enter number to search...",
+        displayCount: "Display",
+        itemsPerPage: "items per page",
+        priceRange: "Price Range",
+        minPrice: "Min Price",
+        maxPrice: "Max Price",
+        applyFilter: "Apply",
+        resetFilter: "Reset",
+        
+        // Sort Options
+        sortBy: "Sort by",
+        priceLowHigh: "Price: Low to High",
+        priceHighLow: "Price: High to Low",
     },
     
     zh: {
@@ -440,7 +472,23 @@ const translations = {
         step1Details: "• 选择心仪的电话号码\n• 添加到购物车\n• 填写联系信息",
         step2Details: "• 接收工作人员的确认电话\n• 获取支付方式指导\n• 安全支付流程",
         step3Details: "• 接收转入账户信息\n• 获取激活PIN码\n• 详细流程指导",
-        step4Details: "• 跟踪转携进度\n• 接收完成通知\n• 开始使用新号码"
+        step4Details: "• 跟踪转携进度\n• 接收完成通知\n• 开始使用新号码",
+        
+        // Filter and Display
+        filterNumbers: "筛选号码",
+        searchPlaceholder: "输入要搜索的号码...",
+        displayCount: "显示",
+        itemsPerPage: "每页显示",
+        priceRange: "价格范围",
+        minPrice: "最低价格",
+        maxPrice: "最高价格",
+        applyFilter: "应用",
+        resetFilter: "重置",
+        
+        // Sort Options
+        sortBy: "排序方式",
+        priceLowHigh: "价格：从低到高",
+        priceHighLow: "价格：从高到低",
     }
 };
 

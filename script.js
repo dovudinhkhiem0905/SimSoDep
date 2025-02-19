@@ -292,22 +292,64 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // Display numbers function
-    function displayNumbers(category, targetElement, state = '') {
+    // Add these variables at the top of your script
+    let currentPage = 1;
+    let itemsPerPage = 10;
+    let filteredNumbers = [];
+
+    // Add this function to handle filtering
+    function filterNumbers(category, searchText, minPrice, maxPrice) {
         const numbers = phoneNumbers[category] || [];
-        const filteredNumbers = state 
+        return numbers.filter(number => {
+            const matchesSearch = searchText ? 
+                number.number.includes(searchText) : true;
+            const matchesMinPrice = minPrice ? 
+                calculateDiscountedPrice(number.price) >= minPrice : true;
+            const matchesMaxPrice = maxPrice ? 
+                calculateDiscountedPrice(number.price) <= maxPrice : true;
+            
+            return matchesSearch && matchesMinPrice && matchesMaxPrice;
+        });
+    }
+
+    // Add this function to handle sorting
+    function sortNumbers(numbers, sortType) {
+        const sortedNumbers = [...numbers];
+        switch(sortType) {
+            case 'price-asc':
+                return sortedNumbers.sort((a, b) => 
+                    calculateDiscountedPrice(a.price) - calculateDiscountedPrice(b.price)
+                );
+            case 'price-desc':
+                return sortedNumbers.sort((a, b) => 
+                    calculateDiscountedPrice(b.price) - calculateDiscountedPrice(a.price)
+                );
+            default:
+                return sortedNumbers;
+        }
+    }
+
+    // Update the displayNumbers function
+    function displayNumbers(category, targetElement, state = '') {
+        let numbers = filteredNumbers.length > 0 ? filteredNumbers : phoneNumbers[category] || [];
+        const filteredByState = state 
             ? numbers.filter(num => num.state === state)
             : numbers;
             
-        targetElement.innerHTML = filteredNumbers.map(createNumberCard).join('');
+        // Get the sort value
+        const sortSelect = targetElement.closest('.container').querySelector('.sort-select');
+        const sortType = sortSelect ? sortSelect.value : 'default';
+        
+        // Sort the numbers
+        const sortedNumbers = sortNumbers(filteredByState, sortType);
+        
+        // Paginate
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const numbersToShow = sortedNumbers.slice(startIndex, endIndex);
+        
+        targetElement.innerHTML = numbersToShow.map(createNumberCard).join('');
         attachCartListeners();
-        // Refresh translations for the newly created elements
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            const key = element.dataset.translate;
-            if (translations[currentLanguage][key]) {
-                element.textContent = translations[currentLanguage][key];
-            }
-        });
     }
 
     // Modify the updateCart function to use discounted prices
@@ -604,6 +646,54 @@ document.addEventListener('DOMContentLoaded', () => {
             if (detailsElement && !detailsElement.textContent && translations[currentLanguage][detailsKey]) {
                 detailsElement.textContent = translations[currentLanguage][detailsKey];
             }
+        });
+    });
+
+    // Add event listeners for filter controls
+    document.querySelectorAll('.filter-controls').forEach(controls => {
+        const section = controls.closest('section');
+        const category = section.id.replace('sim-', '').replace('-', '');
+        const numberGrid = section.querySelector('.number-grid');
+        
+        const searchInput = controls.querySelector('.number-search');
+        const minPriceInput = controls.querySelector('.min-price');
+        const maxPriceInput = controls.querySelector('.max-price');
+        const itemsSelect = controls.querySelector('.items-per-page');
+        
+        controls.querySelector('.apply-filter').addEventListener('click', () => {
+            currentPage = 1;
+            filteredNumbers = filterNumbers(
+                category,
+                searchInput.value,
+                parseFloat(minPriceInput.value),
+                parseFloat(maxPriceInput.value)
+            );
+            displayNumbers(category, numberGrid);
+        });
+        
+        controls.querySelector('.reset-filter').addEventListener('click', () => {
+            searchInput.value = '';
+            minPriceInput.value = '';
+            maxPriceInput.value = '';
+            currentPage = 1;
+            filteredNumbers = [];
+            displayNumbers(category, numberGrid);
+        });
+        
+        itemsSelect.addEventListener('change', (e) => {
+            itemsPerPage = parseInt(e.target.value);
+            currentPage = 1;
+            displayNumbers(category, numberGrid);
+        });
+    });
+
+    // Add event listeners for sort controls
+    document.querySelectorAll('.sort-select').forEach(select => {
+        select.addEventListener('change', (e) => {
+            const section = e.target.closest('section');
+            const category = section.id.replace('sim-', '').replace('-', '');
+            const numberGrid = section.querySelector('.number-grid');
+            displayNumbers(category, numberGrid);
         });
     });
 }); 
