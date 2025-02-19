@@ -98,58 +98,55 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 84, number: '(773) 888-0000', price: 19999, type: 'vip', state: 'IL', city: 'Chicago Zone 04-Humboldt' }    // Triple 8, quad 0
         ],
         dep: [
-            { id: 7, number: '(714) 777-7777', price: 599, type: 'dep', state: 'CA' },
-            { id: 8, number: '(626) 777-7777', price: 499, type: 'dep', state: 'CA' },
-            { id: 9, number: '(212) 777-7777', price: 699, type: 'dep', state: 'NY' },
-            { id: 10, number: '(305) 777-7777', price: 599, type: 'dep', state: 'FL' }
+            
         ],
         giare: [
             // Basic sequential 0123, 1234 patterns
-            { id: 101, number: '(630) 930-0123', price: 299, type: 'giare', state: 'IL' },
-            { id: 102, number: '(815) 519-1234', price: 299, type: 'giare', state: 'IL' },
-            { id: 103, number: '(773) 896-0123', price: 299, type: 'giare', state: 'IL' },
-            { id: 104, number: '(847) 643-2345', price: 249, type: 'giare', state: 'IL' },
+            { id: 101, number: '(630) 930-0123', price: 149, type: 'giare', state: 'IL' },
+            { id: 102, number: '(815) 519-1234', price: 149, type: 'giare', state: 'IL' },
+            { id: 103, number: '(773) 896-0123', price: 149, type: 'giare', state: 'IL' },
+            { id: 104, number: '(847) 643-2345', price: 129, type: 'giare', state: 'IL' },
             
             // Basic 2345 endings
-            { id: 105, number: '(773) 798-2345', price: 249, type: 'giare', state: 'IL' },
-            { id: 106, number: '(773) 389-2345', price: 249, type: 'giare', state: 'IL' },
-            { id: 107, number: '(773) 985-2345', price: 249, type: 'giare', state: 'IL' },
-            { id: 108, number: '(312) 546-3456', price: 299, type: 'giare', state: 'IL' },
+            { id: 105, number: '(773) 798-2345', price: 129, type: 'giare', state: 'IL' },
+            { id: 106, number: '(773) 389-2345', price: 129, type: 'giare', state: 'IL' },
+            { id: 107, number: '(773) 985-2345', price: 129, type: 'giare', state: 'IL' },
+            { id: 108, number: '(312) 546-3456', price: 149, type: 'giare', state: 'IL' },
             
             // 4567 sequences
-            { id: 109, number: '(312) 728-4567', price: 399, type: 'giare', state: 'IL' },
-            { id: 110, number: '(773) 537-4567', price: 399, type: 'giare', state: 'IL' },
-            { id: 111, number: '(312) 820-4567', price: 399, type: 'giare', state: 'IL' },
-            { id: 112, number: '(847) 752-4567', price: 399, type: 'giare', state: 'IL' },
-            { id: 113, number: '(847) 957-4567', price: 399, type: 'giare', state: 'IL' },
+            { id: 109, number: '(312) 728-4567', price: 199, type: 'giare', state: 'IL' },
+            { id: 110, number: '(773) 537-4567', price: 199, type: 'giare', state: 'IL' },
+            { id: 111, number: '(312) 820-4567', price: 199, type: 'giare', state: 'IL' },
+            { id: 112, number: '(847) 752-4567', price: 199, type: 'giare', state: 'IL' },
+            { id: 113, number: '(847) 957-4567', price: 199, type: 'giare', state: 'IL' },
             
             // 5678 sequences (premium)
-            { id: 114, number: '(847) 443-5678', price: 499, type: 'giare', state: 'IL' },
-            { id: 115, number: '(847) 780-5678', price: 499, type: 'giare', state: 'IL' },
-            { id: 116, number: '(847) 582-5678', price: 499, type: 'giare', state: 'IL' },
-            { id: 117, number: '(773) 916-5678', price: 499, type: 'giare', state: 'IL' },
+            { id: 114, number: '(847) 443-5678', price: 299, type: 'giare', state: 'IL' },
+            { id: 115, number: '(847) 780-5678', price: 299, type: 'giare', state: 'IL' },
+            { id: 116, number: '(847) 582-5678', price: 299, type: 'giare', state: 'IL' },
+            { id: 117, number: '(773) 916-5678', price: 299, type: 'giare', state: 'IL' },
             
             // 6789 sequences (premium)
-            { id: 118, number: '(847) 968-6789', price: 599, type: 'giare', state: 'IL' },
-            { id: 119, number: '(773) 726-6789', price: 599, type: 'giare', state: 'IL' },
-            { id: 120, number: '(847) 860-6789', price: 599, type: 'giare', state: 'IL' },
-            { id: 121, number: '(847) 973-6789', price: 599, type: 'giare', state: 'IL' },
-            { id: 122, number: '(773) 830-6789', price: 599, type: 'giare', state: 'IL' },
+            { id: 118, number: '(847) 968-6789', price: 399, type: 'giare', state: 'IL' },
+            { id: 119, number: '(773) 726-6789', price: 399, type: 'giare', state: 'IL' },
+            { id: 120, number: '(847) 860-6789', price: 399, type: 'giare', state: 'IL' },
+            { id: 121, number: '(847) 973-6789', price: 399, type: 'giare', state: 'IL' },
+            { id: 122, number: '(773) 830-6789', price: 399, type: 'giare', state: 'IL' },
             
             // 7890 endings
-            { id: 123, number: '(847) 447-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 124, number: '(773) 819-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 125, number: '(773) 948-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 126, number: '(847) 796-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 127, number: '(847) 920-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 128, number: '(312) 854-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 129, number: '(773) 800-7890', price: 449, type: 'giare', state: 'IL' }, // Nice 800 middle
-            { id: 130, number: '(847) 306-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 131, number: '(847) 861-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 132, number: '(773) 873-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 133, number: '(847) 860-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 134, number: '(847) 925-7890', price: 399, type: 'giare', state: 'IL' },
-            { id: 135, number: '(312) 957-7890', price: 399, type: 'giare', state: 'IL' }
+            { id: 123, number: '(847) 447-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 124, number: '(773) 819-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 125, number: '(773) 948-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 126, number: '(847) 796-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 127, number: '(847) 920-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 128, number: '(312) 854-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 129, number: '(773) 800-7890', price: 249, type: 'giare', state: 'IL' }, // Nice 800 middle
+            { id: 130, number: '(847) 306-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 131, number: '(847) 861-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 132, number: '(773) 873-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 133, number: '(847) 860-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 134, number: '(847) 925-7890', price: 199, type: 'giare', state: 'IL' },
+            { id: 135, number: '(312) 957-7890', price: 199, type: 'giare', state: 'IL' }
         ]
     };
 
@@ -204,12 +201,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Create number card HTML
+    // Add this function to calculate discounted price
+    function calculateDiscountedPrice(originalPrice) {
+        return Math.floor(originalPrice * 0.8); // 20% off
+    }
+
+    // Modify the createNumberCard function to show both original and discounted price
     function createNumberCard(number) {
+        const discountedPrice = calculateDiscountedPrice(number.price);
         return `
             <div class="number-card">
                 <div class="number">${number.number}</div>
-                <div class="price">$${number.price}</div>
+                <div class="price">
+                    <span class="original-price">$${number.price}</span>
+                    <span class="discounted-price">$${discountedPrice}</span>
+                </div>
+                <div class="discount-badge">-20%</div>
                 <button class="add-to-cart">Thêm vào giỏ</button>
             </div>
         `;
@@ -226,13 +233,16 @@ document.addEventListener('DOMContentLoaded', () => {
         attachCartListeners();
     }
 
-    // Cart functionality
+    // Modify the updateCart function to use discounted prices
     function updateCart() {
         cartItems.innerHTML = cart.map((item, index) => `
             <div class="cart-item">
                 <div class="cart-item-details">
                     <div class="cart-item-number">${item.number}</div>
-                    <div class="cart-item-price">$${item.price}</div>
+                    <div class="cart-item-price">
+                        <span class="original-price">$${item.price}</span>
+                        <span class="discounted-price">$${calculateDiscountedPrice(item.price)}</span>
+                    </div>
                 </div>
                 <button class="remove-item" data-index="${index}">
                     <i class="fas fa-trash"></i>
@@ -240,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        const total = cart.reduce((sum, item) => sum + calculateDiscountedPrice(item.price), 0);
         cartTotal.textContent = total;
         cartCount.textContent = cart.length;
 
