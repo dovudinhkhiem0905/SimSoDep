@@ -447,13 +447,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile menu toggle
-    const menuButton = document.createElement('button');
-    menuButton.className = 'menu-toggle';
-    menuButton.innerHTML = '<i class="fas fa-bars"></i>';
-    document.querySelector('.main-nav .container').prepend(menuButton);
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
     menuButton.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-links') && !e.target.closest('.menu-toggle')) {
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
     });
 
     // Add this at the start of your DOMContentLoaded event listener

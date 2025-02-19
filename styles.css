@@ -827,4 +827,157 @@ body {
     .promo-banner strong {
         font-size: 1.2rem;
     }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .top-bar {
+        padding: 5px 0;
+        font-size: 0.8rem;
+    }
+
+    .contact-info a {
+        margin-right: 10px;
+    }
+
+    .main-nav .container {
+        padding: 10px;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    /* Hide desktop nav links and show mobile menu */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show mobile menu button */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    /* Search and cart adjustments */
+    .search-cart {
+        gap: 10px;
+    }
+
+    .search-box {
+        display: none; /* Hide search on mobile */
+    }
+
+    /* Number grid adjustments */
+    .number-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .number-card {
+        padding: 15px;
+    }
+
+    /* Cart overlay adjustments */
+    .cart-overlay, .checkout-overlay {
+        width: 100%;
+    }
+
+    .cart-content, .checkout-content {
+        padding: 15px;
+    }
+
+    /* Promo banner adjustments */
+    .promo-banner {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .promo-banner strong {
+        font-size: 1.1rem;
+    }
+
+    /* Feature cards adjustments */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .top-bar .container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-info, .social-links {
+        width: 100%;
+        text-align: center;
+    }
+
+    .number-card .price {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Add smooth transitions */
+.nav-links {
+    transition: all 0.3s ease;
+}
+
+.number-card {
+    transition: transform 0.2s ease;
+}
+
+.number-card:hover {
+    transform: translateY(-2px);
 } 
