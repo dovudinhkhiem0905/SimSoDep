@@ -56,7 +56,46 @@ const translations = {
         // Misc
         close: "Đóng",
         loading: "Đang tải...",
-        required: "Bắt buộc"
+        required: "Bắt buộc",
+        
+        // Hero Section
+        heroTitle: "Sim Số Đẹp Mỹ",
+        heroDesc: "Kho số điện thoại Mỹ đẹp và độc đáo nhất dành cho người Việt",
+        contactUs: "Liên Hệ Tư Vấn",
+        
+        // Features
+        genuineTitle: "Bảo Đảm Chính Hãng",
+        genuineDesc: "100% số điện thoại từ nhà mạng Mỹ uy tín",
+        fastActivationTitle: "Kích Hoạt Nhanh",
+        fastActivationDesc: "Kích hoạt số trong vòng 24h",
+        supportTitle: "Hỗ Trợ 24/7",
+        supportDesc: "Đội ngũ tư vấn viên nhiệt tình",
+        securityTitle: "Bảo Mật Thông Tin",
+        securityDesc: "An toàn tuyệt đối cho khách hàng",
+        
+        // Categories
+        allStates: "Tất Cả Tiểu Bang",
+        
+        // Contact Form
+        contactTitle: "Liên Hệ Tư Vấn",
+        message: "Nội Dung",
+        sendInfo: "Gửi Thông Tin",
+        
+        // Footer
+        aboutUs: "Về SimUSA",
+        aboutDesc: "Chuyên cung cấp sim số đẹp Mỹ cho cộng đồng người Việt.",
+        followUs: "Theo Dõi",
+        
+        // Cart
+        added: "Đã thêm",
+        addedToCart: "Đã thêm vào giỏ hàng!",
+        
+        // Checkout
+        paymentNote: "Sau khi nhận được thông tin của bạn, chúng tôi sẽ liên hệ để xác nhận đơn hàng và cung cấp thông tin thanh toán.",
+        
+        // Success Messages
+        orderSuccess: "Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ sớm nhất có thể!",
+        orderError: "Có lỗi xảy ra. Vui lòng thử lại sau!"
     },
     
     en: {
@@ -116,7 +155,46 @@ const translations = {
         // Misc
         close: "Close",
         loading: "Loading...",
-        required: "Required"
+        required: "Required",
+        
+        // Hero Section
+        heroTitle: "Premium US Phone Numbers",
+        heroDesc: "The most unique and beautiful US phone numbers for the Vietnamese community",
+        contactUs: "Contact Us",
+        
+        // Features
+        genuineTitle: "Guaranteed Genuine",
+        genuineDesc: "100% authentic numbers from US carriers",
+        fastActivationTitle: "Fast Activation",
+        fastActivationDesc: "Number activation within 24 hours",
+        supportTitle: "24/7 Support",
+        supportDesc: "Dedicated support team",
+        securityTitle: "Information Security",
+        securityDesc: "Absolute safety for customers",
+        
+        // Categories
+        allStates: "All States",
+        
+        // Contact Form
+        contactTitle: "Contact Us",
+        message: "Message",
+        sendInfo: "Send Information",
+        
+        // Footer
+        aboutUs: "About SimUSA",
+        aboutDesc: "Providing premium US phone numbers for the Vietnamese community.",
+        followUs: "Follow Us",
+        
+        // Cart
+        added: "Added",
+        addedToCart: "Added to cart!",
+        
+        // Checkout
+        paymentNote: "After receiving your information, we will contact you to confirm the order and provide payment details.",
+        
+        // Success Messages
+        orderSuccess: "Thank you for your order. We will contact you as soon as possible!",
+        orderError: "An error occurred. Please try again later!"
     },
     
     zh: {
@@ -176,7 +254,46 @@ const translations = {
         // Misc
         close: "关闭",
         loading: "加载中...",
-        required: "必填"
+        required: "必填",
+        
+        // Hero Section
+        heroTitle: "美国精品电话号码",
+        heroDesc: "为越南社区提供最独特和精美的美国电话号码",
+        contactUs: "联系我们",
+        
+        // Features
+        genuineTitle: "保证正品",
+        genuineDesc: "100%来自美国运营商的正品号码",
+        fastActivationTitle: "快速激活",
+        fastActivationDesc: "24小时内号码激活",
+        supportTitle: "24/7支持",
+        supportDesc: "专业支持团队",
+        securityTitle: "信息安全",
+        securityDesc: "为客户提供绝对安全保障",
+        
+        // Categories
+        allStates: "所有州",
+        
+        // Contact Form
+        contactTitle: "联系我们",
+        message: "留言",
+        sendInfo: "发送信息",
+        
+        // Footer
+        aboutUs: "关于SimUSA",
+        aboutDesc: "为越南社区提供优质美国电话号码。",
+        followUs: "关注我们",
+        
+        // Cart
+        added: "已添加",
+        addedToCart: "已添加到购物车！",
+        
+        // Checkout
+        paymentNote: "收到您的信息后，我们会联系您确认订单并提供支付详情。",
+        
+        // Success Messages
+        orderSuccess: "感谢您的订购。我们会尽快与您联系！",
+        orderError: "发生错误。请稍后重试！"
     }
 };
 

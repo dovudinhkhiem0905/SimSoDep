@@ -34,6 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
+        // Update select options with data-translate
+        document.querySelectorAll('select option[data-translate]').forEach(option => {
+            const key = option.dataset.translate;
+            if (translations[lang][key]) {
+                option.textContent = translations[lang][key];
+            }
+        });
+        
+        // Refresh all number cards to update their buttons
+        document.querySelectorAll('.number-grid').forEach(grid => {
+            if (grid.children.length > 0) {
+                const category = grid.closest('section').id.replace('sim-', '').replace('-', '');
+                displayNumbers(category, grid);
+            }
+        });
+        
         // Update current language display
         const langDisplay = {
             'vi': 'Tiếng Việt',
@@ -121,39 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 30, number: '(464) 999-8888', price: 5499, type: 'vip', state: 'IL', city: 'Harvey' },         // Triple 9, triple 8
             { id: 31, number: '(464) 222-0000', price: 4999, type: 'vip', state: 'IL', city: 'Mokena' },         // Triple 2, quad 0
             { id: 32, number: '(618) 777-1111', price: 4299, type: 'vip', state: 'IL', city: 'Staunton' },        // Triple 7, triple 1
-            { id: 33, number: '(464) 666-3333', price: 4999, type: 'vip', state: 'IL', city: 'Calumet City' },    // Triple 6, triple 3
-            { id: 34, number: '(708) 666-3333', price: 5499, type: 'vip', state: 'IL', city: 'Oak Park' },        // Triple 6, triple 3 (better area)
-            { id: 35, number: '(464) 999-5555', price: 4999, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 9, triple 5
-            { id: 36, number: '(309) 777-6666', price: 5299, type: 'vip', state: 'IL', city: 'Ipava' },           // Triple 7, triple 6
-            { id: 37, number: '(464) 777-6666', price: 5299, type: 'vip', state: 'IL', city: 'Summit' },          // Triple 7, triple 6
-            { id: 38, number: '(464) 333-7777', price: 4999, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 3, triple 7
-            { id: 39, number: '(464) 222-9999', price: 4799, type: 'vip', state: 'IL', city: 'Mokena' },          // Triple 2, triple 9
-            { id: 40, number: '(224) 333-1111', price: 4299, type: 'vip', state: 'IL', city: 'Algonquin' },       // Triple 3, triple 1
-            { id: 41, number: '(464) 333-1111', price: 4299, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 3, triple 1
-            { id: 42, number: '(331) 666-3333', price: 5499, type: 'vip', state: 'IL', city: 'Aurora' },          // Triple 6, triple 3
-            { id: 43, number: '(847) 999-6666', price: 6999, type: 'vip', state: 'IL', city: 'Winnetka' },        // Triple 9, triple 6 (premium area)
-            { id: 44, number: '(464) 888-4444', price: 4999, type: 'vip', state: 'IL', city: 'Orland' },          // Triple 8, triple 4
-            { id: 45, number: '(464) 444-8888', price: 4999, type: 'vip', state: 'IL', city: 'Beecher' },         // Triple 4, triple 8
-            { id: 46, number: '(309) 222-0000', price: 5999, type: 'vip', state: 'IL', city: 'Peoria' },          // Triple 2, quad 0
-            { id: 47, number: '(217) 888-4444', price: 4799, type: 'vip', state: 'IL', city: 'Champaign-Urbana' }, // Triple 8, triple 4
-            { id: 48, number: '(618) 666-4444', price: 4799, type: 'vip', state: 'IL', city: 'Collinsville' },    // Triple 6, triple 4
-            { id: 49, number: '(309) 222-1111', price: 4999, type: 'vip', state: 'IL', city: 'Peoria' },          // Triple 2, triple 1
-            { id: 50, number: '(217) 888-6666', price: 4999, type: 'vip', state: 'IL', city: 'Champaign-Urbana' }, // Triple 8, triple 6
-            { id: 51, number: '(872) 666-2222', price: 4799, type: 'vip', state: 'IL', city: 'Chicago Zone 09-South Chicago' }, // Triple 6, triple 2
-            { id: 52, number: '(779) 222-3333', price: 4799, type: 'vip', state: 'IL', city: 'Sycamore' },        // Triple 2, triple 3
-            { id: 53, number: '(872) 444-3333', price: 4799, type: 'vip', state: 'IL', city: 'Chicago Zone 06-Kedzie' }, // Triple 4, triple 3
-            { id: 54, number: '(779) 777-4444', price: 4999, type: 'vip', state: 'IL', city: 'De Kalb' },         // Triple 7, triple 4
-            { id: 55, number: '(815) 666-3333', price: 4999, type: 'vip', state: 'IL', city: 'Joliet' },          // Triple 6, triple 3
-            { id: 56, number: '(708) 777-2222', price: 5299, type: 'vip', state: 'IL', city: 'Cicero' },          // Triple 7, triple 2
-            { id: 57, number: '(708) 777-3333', price: 5299, type: 'vip', state: 'IL', city: 'Cicero' },          // Triple 7, triple 3
-            { id: 58, number: '(331) 222-3333', price: 4999, type: 'vip', state: 'IL', city: 'Geneva' },          // Triple 2, triple 3
-            { id: 59, number: '(464) 333-4444', price: 4799, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 3, triple 4
-            { id: 60, number: '(464) 777-5555', price: 4999, type: 'vip', state: 'IL', city: 'Summit' },          // Triple 7, triple 5
-            { id: 61, number: '(224) 888-6666', price: 4999, type: 'vip', state: 'IL', city: 'Cary' },            // Triple 8, triple 6
-            { id: 62, number: '(464) 999-7777', price: 5499, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 9, triple 7
-            { id: 63, number: '(464) 999-8888', price: 5499, type: 'vip', state: 'IL', city: 'Harvey' },          // Triple 9, triple 8
-            { id: 64, number: '(464) 222-0000', price: 5999, type: 'vip', state: 'IL', city: 'Mokena' },          // Triple 2, quad 0
-            { id: 65, number: '(618) 777-1111', price: 4799, type: 'vip', state: 'IL', city: 'Staunton' },         // Triple 7, triple 1
             // New VIP numbers with "GET IT NOW" - Higher priced premium numbers
             { id: 66, number: '(312) 444-6666', price: 7999, type: 'vip', state: 'IL', city: 'Chicago Zone 01-Franklin' }, // Chicago proper, triple 4, triple 6
             { id: 67, number: '(331) 999-5555', price: 7499, type: 'vip', state: 'IL', city: 'Oswego' },          // Triple 9, triple 5
@@ -288,14 +271,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function createNumberCard(number) {
         const discountedPrice = calculateDiscountedPrice(number.price);
         return `
-            <div class="number-card">
+            <div class="number-card" data-price="${number.price}">
                 <div class="number">${number.number}</div>
                 <div class="price">
                     <span class="original-price">$${number.price}</span>
                     <span class="discounted-price">$${discountedPrice}</span>
                 </div>
                 <div class="discount-badge">-20%</div>
-                <button class="add-to-cart">Thêm vào giỏ</button>
+                <button class="add-to-cart" data-translate="addToCart">${translations[currentLanguage].addToCart}</button>
             </div>
         `;
     }
@@ -309,6 +292,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
         targetElement.innerHTML = filteredNumbers.map(createNumberCard).join('');
         attachCartListeners();
+        // Refresh translations for the newly created elements
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.dataset.translate;
+            if (translations[currentLanguage][key]) {
+                element.textContent = translations[currentLanguage][key];
+            }
+        });
     }
 
     // Modify the updateCart function to use discounted prices
@@ -350,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="cart-total">
                 Tổng cộng: $<span id="cartTotal">${total}</span>
             </div>
-            <button class="checkout-btn">Thanh Toán</button>
+            <button class="checkout-btn" data-translate="checkout">Thanh Toán</button>
         `;
         
         document.querySelector('.cart-footer').innerHTML = cartFooter;
@@ -373,16 +363,17 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', (e) => {
                 const card = e.target.closest('.number-card');
                 const number = card.querySelector('.number').textContent;
-                const price = parseFloat(card.querySelector('.price').textContent.slice(1));
+                const price = parseFloat(card.dataset.price); // Get price from data attribute
                 
                 cart.push({ number, price });
                 updateCart();
                 
                 // Visual feedback
-                button.textContent = 'Đã thêm';
+                button.textContent = translations[currentLanguage].added || 'Đã thêm';
                 button.classList.add('added');
                 
                 // Show notification
+                cartNotification.textContent = translations[currentLanguage].addedToCart || 'Đã thêm vào giỏ hàng!';
                 cartNotification.classList.add('show');
                 setTimeout(() => {
                     cartNotification.classList.remove('show');
@@ -390,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Reset button
                 setTimeout(() => {
-                    button.textContent = 'Thêm vào giỏ';
+                    button.textContent = translations[currentLanguage].addToCart || 'Thêm vào giỏ';
                     button.classList.remove('added');
                 }, 2000);
             });
